@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="webjars/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+           $(function () {
+               setTimeout(show,2000)
+           })
+           function show() {
+               $("#div1").show(3000)
+               setTimeout(hide,3000)
+           }
+           function hide() {
+               $("#div1").hide(1000)
+
+           }
+    </script>
+</head>
+<body>
+<div id="div1" style="display: none;" >
+    <img src="/photos/1.jpg"  width="100%" height="200px" >
+</div>
+</body>
+</html>

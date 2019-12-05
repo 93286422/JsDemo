@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:display="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var timer
+        onload = function () {
+         // alert('a')
+           timer = setInterval(show,2000)
+        }
+        function show() {
+            var s = document.getElementById("div1")
+            s.style.display = "block"
+            var hider = setTimeout(hide,4000);
+        }
+        function hide() {
+            var s = document.getElementById("div1")
+            s.style.display = "none";
+            clearInterval(timer)
+            //clearTimeout(hider)
+
+
+        }
+    </script>
+</head>
+<body>
+  <div id="div1" style="display: none;" >
+      <img src="/photos/1.jpg"  width="100%" height="200px" >
+  </div>
+
+</body>
+</html>

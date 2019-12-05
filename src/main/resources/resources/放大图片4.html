@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="webjars/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    $(function () {
+        $("#imgId").click(function () {
+            var src = $("#imgId").attr("src");
+            window.open(src);
+        });
+    })
+
+</script>
+<body>
+<img src="/photos/1.jpg" id="imgId">
+<img src="/photos/2.jpg" id="imgId1">
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+       function test1() {
+           var div1 = document.getElementById("div1")
+           //alert(div1)
+           div1.style.backgroundColor = "red";
+           div1.style.border = "1px solid red";
+           div1.style.width = "200px"
+           div1.style.height = "200px"
+       }
+        
+   </script>
+    <script>
+        function SectionToChinese(section) {
+            var chnNumChar = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
+            var chnUnitSection = ["", "万", "亿", "万亿", "亿亿"];
+            var chnUnitChar = ["", "十", "百", "千"];
+            var strIns = '', chnStr = '';
+            var unitPos = 0;
+            var zero = true;
+            while (section > 0) {
+                var v = section % 10;
+                if (v === 0) {
+                    if (!zero) {
+                        zero = true;
+                        chnStr = chnNumChar[v] + chnStr;
+                    }
+                } else {
+                    zero = false;
+                    strIns = chnNumChar[v];
+                    strIns += chnUnitChar[unitPos];
+                    chnStr = strIns + chnStr;
+                }
+                unitPos++;
+                section = Math.floor(section / 10);
+            }
+            return chnStr;
+        }
+        function SectionToSpecialChinese(section) {
+            var chnNumChar = ["零", "一", "二", "三", "四", "五", "六", "天", "八", "九"];
+            var chnUnitSection = ["", "万", "亿", "万亿", "亿亿"];
+            var chnUnitChar = ["", "十", "百", "千"];
+            var strIns = '', chnStr = '';
+            var unitPos = 0;
+            var zero = true;
+            while (section > 0) {
+                var v = section % 10;
+                if (v === 0) {
+                    if (!zero) {
+                        zero = true;
+                        chnStr = chnNumChar[v] + chnStr;
+                    }
+                } else {
+                    zero = false;
+                    strIns = chnNumChar[v];
+                    strIns += chnUnitChar[unitPos];
+                    chnStr = strIns + chnStr;
+                }
+                unitPos++;
+                section = Math.floor(section / 10);
+            }
+            return chnStr;
+        }
+
+        function test33() {
+            var s=24;
+            var ss=SectionToChinese(s);
+            var sss=SectionToSpecialChinese(s);
+            alert(ss)
+            alert(sss)
+        }
+    </script>
+
+</head>
+<body onload="test33()">
+<input type="button" id="btn1" value="给div添样式" onclick="test1()">
+<div id="div1">
+
+</div>
+
+</body>
+</html>

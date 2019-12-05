@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
+</head>
+<script>
+    function test() {
+
+        var a = document.getElementById("but1")
+        alert(a.value)
+        alert(a.name)
+    }
+    function test1() {
+
+        var a = document.getElementById("but1")
+        var b = document.getElementsByName("buttonname1")
+        alert(a.value)
+        alert(b)
+    }
+    function test3() {
+        var a  = document.getElementById("file1")
+        alert($("#file1")[0].files[0])
+        alert(a)
+    }
+</script>
+<script>
+    var s = "我们开始行动";
+    function ztest1() {
+        alert("onload事件")
+
+    }
+    function ztest2() {
+        alert("onclick事件")
+
+    }
+
+</script>
+<!--<body onload="geolocation.getLocation(showPosition,showErr,options)">-->
+<!--<body onload="geolocation.getLocation(showPosition,options)">-->
+<body onload="ztest1()">
+<input type="button" value="点我试试" id="but1" name="buttonname1" onclick="test()">
+<input type="button" value="点我试试" id="but2" name="buttonname2" onclick="test1()">
+<input type="file" value="file1" id="file1" name="file1">
+<input type="file" id="file2" name="file2" >
+<input type="button" value="点我试试" id="but3" name="buttonname3" onclick="test3()">
+<input type="button"  onclick="ztest2()" value="事件测试">
+<input type="button"  onclick="ztest3()" value="地点测试">
+<input type="button" onclick="ztest4(this.id)" value="测试一" id="t1">
+<input type="button" onclick="ztest4(this.id)" value="测试一" id="t2">
+<div >
+</div>
+</body>
+<script type="text/JavaScript">
+    var geolocation = new qq.maps.Geolocation("6XUBZ-7TB3U-KDQVS-4AYHE-TOHS6-D5BMF", "xkxk");
+    var WorkAdress;
+    var options = {timeout: 2000};
+    function showPosition(position) {
+        var test1 = JSON.stringify(position);
+        WorkAdress = JSON.stringify(position)
+    };
+//    function showErr() {
+//        alert("定位失败,请刷新页面允许获取地理位置")
+//    };
+
+    function ztest3() {
+        alert(WorkAdress)
+    }
+    function ztest4(obj) {
+        alert(obj)
+    }
+
+
+</script>
+</html>

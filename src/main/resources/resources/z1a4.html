@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--<html lang="en" xmlns:margin-left="http://www.w3.org/1999/xhtml">-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>-->
+    <script type="text/javascript" src="https://3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
+    <style>
+        /*css代码*/
+        #div9{
+            width: 800px;
+            height: 800px;
+            margin: 50px auto;
+            /*border: 1px solid red;*/
+            line-height: 100px; /*设置line-height与父级元素的height相等*/
+            text-align: center; /*设置文本水平居中*/
+            overflow: hidden; /*防止内容超出容器或者产生自动换行*/
+            box-shadow: 0 0 10px  #000;
+        }
+    </style>
+    <style>
+        .div1
+        {
+            height:       100px;
+            width:          100%;
+            box-shadow:10px 15px 15px -15px #ccc;
+            text-align: center;
+        }
+        .div0{
+            height:           120px;
+            width:          100%;
+            text-align:     center;
+        }
+        #textereaClass{
+            /*border:solid 1px grey;*/
+            border                   : 1px solid #ddd;
+            /*border-radius: 5px*/
+            /*width:360px;*/
+            width                    : 23em;
+            height:200px
+
+        }
+
+    </style>
+    <style type="text/css">
+        select#selectTravelCity
+        {
+            width                    : 23em;
+            height                   : 3.2em;
+            padding                  : 0.2em 0.4em 0.2em 0.4em;
+            vertical-align           : middle;
+            border                   : 1px solid #ddd;
+            -moz-border-radius       : 0.2em;
+            -webkit-border-radius    : 0.2em;
+            border-radius            : 0.2em;
+            -webkit-appearance       : none;
+            -moz-appearance          : none;
+            appearance               : none;
+            background               : #ffffff;
+            /*font-family              : ;*/
+            font-size                : 1.0em;
+            color                    :  black;
+            cursor                   : pointer;
+            text-align               : center;
+            text-align-last          :center;
+        }
+        label{
+            position: relative;
+        }
+        #fileinp{
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width                    : 23em;
+            height                   : 3.2em;
+        }
+        #btn{
+            width                    : 23em;
+            height                   : 3.2em;
+            font-size                : 1.0em;
+            background: #e2231a;
+            color: white;
+            border                   : 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #sub{
+            width                    : 23em;
+            height                   : 3.2em;
+            font-size                : 1.0em;
+            background:#e2231a;
+            color: white;
+            border:solid 1px #ddd;
+            border-radius: 5px;
+        }
+        #text{
+            color: grey;
+        }
+    </style>
+    <style>
+        body {
+            text-align: center;
+            padding: 5em;
+        }
+        label, input {
+            text-align: center;
+            color: #333;
+            font: 15.5px/20px Arial;
+        }
+        label {
+            display: inline-block;
+            width: 20em;
+            /*padding: 0 1em;*/
+            text-align: center;
+        }
+        [type=file] {
+            text-align: center;
+            position: absolute;
+            width: 20em;
+            filter: alpha(opacity=0);
+            opacity: 0;
+        }
+        input,
+        [type=file] + label {
+            text-align: center;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+
+            /*重要调节手段*/
+            padding: 15px;
+            width: 336px;
+            /*height: 50%;*/
+            margin: 0;
+            left: 0;
+            position: relative;
+        }
+        [type=file] + label {
+            text-align: center;
+            /*left: 7.35em;*/
+            top: 0.9em;
+            background: #e2231a;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        [type=file] + label:hover {
+            text-align: center;
+            background: #e2231a;
+        }
+    </style>
+    <script src="webjars/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#fileinp").change(function () {
+                $("#text").html($("#fileinp").val());
+            })
+        })
+
+    </script>
+
+    <script>
+        $(function () {
+            $("[type=file]").on("change", function(){
+                // alert('s')
+                var file = this.files[0].name;
+                var placeholder = $(this).attr("placeholder");
+                if($(this).val()!=""){
+                    $(this).next().text(file);
+                } else {
+                    $(this).next().text(placeholder);
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+<div id="div9">
+    <p></p>
+    <div class="div0" align="center">
+        <font style="font-family:楷体" size="20">巡查表</font>
+    </div>
+    <div class="div2" align="center">
+        <select id="selectTravelCity" title="Select Travel Destination">
+            <option>点击选择水表</option>
+        </select>
+    </div>
+    <p></p>
+    <div align="center">
+        <!--<textarea style="width: 240px;height: 100px;color: grey; border-bottom-color:grey" class="textereaClass"><font color="black">备注</font>
+        </textarea>-->
+        <textarea style=" font-size:15.8px; color:black" id="textereaClass" name="text" >备注:</textarea>
+    </div>
+    <p></p>
+    <div>
+        <input id="file" type="file"  name="file"   placeholder="Chosse File"  align="center" onchange="imgChange(event)" accept=".gif,.jpg,.jpeg,.png"/>
+        <label for="file" margin-left:auto;margin-right:auto>点击上传照片</label>
+    </div>
+    <div align="">
+        <!--<input type="button" value="点击提交巡查表" name="submit" id="sub"><p></p>-->
+        <button onClick="geolocation.getLocation(showPosition,options)" name="submit" id="sub">点击提交巡查表</button>
+    </div>
+</div>
+<script type="text/JavaScript">
+    var geolocation = new qq.maps.Geolocation("6XUBZ-7TB3U-KDQVS-4AYHE-TOHS6-D5BMF", "xkxk");
+    document.getElementById("pos-area").style.height = (document.body.clientHeight - 110) + 'px';
+    var positionNum = 0;
+    var options = {timeout: 8000};
+    function showPosition(position) {
+        var test1 = JSON.stringify(position);
+        $(function () {
+            var formData = new FormData()
+            var $waterMeter=$("#selectTravelCity");
+            var $waterId=$("#textereaClass");
+            //alert($waterId.val())
+            formData.append("files", $("#file")[0].files[0])
+            formData.append("test1",test1)
+            formData.append("waterId",$waterId.val())
+            formData.append("waterMeter",$waterMeter.val())
+            $.ajax({
+                type:'POST',
+                url:"jqueryTest41",
+                data:formData,
+                contentType:false,
+                processData:false,//这个很有必要，不然不行
+                dataType:"json",
+                mimeType:"multipart/form-data",
+                success:function(data){
+                    if(200==data.code){
+                        Feng.success("保存成功!");
+                        window.parent.Consult.table.refresh();
+                        ConInfoDlg.close();
+                    }else{
+                        Feng.error("保存失败!"+data.message);
+                    }
+                }
+            });
+            alert('提交成功')
+            window.location.reload();
+        })
+    };
+</script>
+<script type="text/javascript">
+    //alert('成功');
+    $(function(){
+        $.post("selectWaterId",function(d) {
+            //alert(d)
+            //alert(d)
+            var $pro=$("#selectTravelCity");
+            $(d).each(function(){
+                $pro.append($("<option value="+this.waterMeterId+">"+this.waterMeterId+"</option>"));
+            });
+        },"json");
+    })
+</script>
+<script>
+    function imgChange(e) {
+        console.info(e.target.files[0]);//图片文件
+        var dom =$("input[id^='file']")[0];
+        console.info(dom.value);//这个是文件的路径 C:\fakepath\icon (5).png
+        console.log(e.target.value);//这个也是文件的路径和上面的dom.value是一样的
+        var reader = new FileReader();
+        reader.onload = (function (file) {
+            return function (e) {
+                console.info(this.result); //这个就是base64的数据了
+                $("#file")[0].src=this.result;
+            };
+        })(e.target.files[0]);
+        reader.readAsDataURL(e.target.files[0]);
+    }
+</script>
+</body>
+</html>

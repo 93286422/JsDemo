@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
+    <script type="text/JavaScript">
+        var WorkAdress;
+        function checkForm() {
+
+            document.getElementById("text2").value=WorkAdress
+        }
+        var geolocation = new qq.maps.Geolocation("6XUBZ-7TB3U-KDQVS-4AYHE-TOHS6-D5BMF", "xkxk");
+        var options = {timeout: 2000};
+        function showPosition(position) {
+            var test1 = JSON.stringify(position);
+            WorkAdress = JSON.stringify(position)
+        }
+    </script>
+</head>
+<body onload="geolocation.getLocation(showPosition,options)">
+<form action="test2" onsubmit="return checkForm()" method="post" enctype="multipart/form-data">
+    <div>
+        <input type="text"  name="text1" id="text1" >
+    </div>
+    <div style="display: none;">
+        <input type="text"  name="text2" id="text2" >
+    </div>
+    <div>
+        <input type="file" id="file1" name="file1">
+    </div>
+    <div>
+        <input type="submit" value="提交"/>
+    </div>
+</form>
+
+</body>
+</html>

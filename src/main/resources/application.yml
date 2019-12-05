@@ -1,0 +1,19 @@
+server:
+  port: 8085
+spring:
+  servlet:
+    multipart:
+        enabled: true #是否启用http上传处理
+        max-request-size: 100MB #最大请求文件的大小
+        max-file-size: 20MB #设置单个文件最大长度
+        file-size-threshold: 20MB #当文件达到多少时进行磁盘写入
+  datasource:
+    username: root
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/water meter?serverTimezone=Asia/Shanghai
+    type: com.alibaba.druid.pool.DruidDataSource
+  mvc:
+    static-path-pattern: /**
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    var divObj;
+    var i = 0;
+    var s = "我正在开始行动";
+    function init() {
+        divObj = document.getElementById("divId")
+         setInterval(show,200)
+    }
+    function show() {
+           i++;
+           s_=s.substring(0,i);
+           divObj.innerHTML=s_;
+          // document.write(s_);
+        if( i ==s.length ){
+            i = 0;
+        }
+    }
+</script>
+<body id="divId1" onload="init()">
+<div id="divId">
+
+</div>
+
+</body>
+</html>

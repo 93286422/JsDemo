@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    img{
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<script>
+    function lookimg(str)
+    {
+//        var newwin=window.open()
+//        newwin.document.write("<img src="+str+" />")
+        window.open(str)
+    }
+</script>
+<body>
+<img src="/photos/1.jpg" onclick="lookimg(this.src)">
+<img src="/photos/2.jpg" onclick="lookimg(this.src)">
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+    <style type="text/css">
+        div{
+            border:1px solid #000;
+            width:100px;
+            height:100px;
+        }
+    </style>
+    <script type="text/javascript">
+           $(function () {
+               $("#b1").click(function () {
+                 $("#b1Div").toggle(1000)
+               })
+           })
+    </script>
+    <script>
+          $(function () {
+              $(".test").click(function(){
+                  $(this).css({'background-color':'red'});
+              });
+          })
+    </script>
+</head>
+<body>
+<input type="button" id="b1" value="显示/隐藏 b1Div" />
+<div id="b1Div"></div> <br/>
+<input type="button" id="b2" value="滑出/滑入b2Div"/>
+<div id="b2Div"></div> <br/>
+<input type="button" id="b3" value="淡出/淡入b3Div" />
+<div id="b3Div"></div>
+<button class="test">测试按钮变色</button>
+<button class="btn-1" id="7-1" data-toggle="modal" style="background-color: red">
+11111
+</button>
+</body>
+</html>

@@ -1,0 +1,479 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="textml; charset=UTF-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+<title>课程表</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--<input type="button" id="t1" onclick="testWeek()">-->
+<!--<script>-->
+    <!--function testWeek() {-->
+        <!--//$("#id").val(data.id);-->
+<!--//            var getyear=parseInt($("#setyear").val());-->
+<!--//                   $("#setyear").val()-->
+        <!--var a=$("#setweek").val();-->
+        <!--alert(a)-->
+    <!--}-->
+<!--</script>-->
+<div>
+	<table class="class">
+		<thead>
+			<tr>
+			  <th colspan="2" class="text-center">节次</th>
+			  <th colspan="7"><div class="bd_w jcalendar_week" id="jcalendar_week"></div></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			    <td rowspan="4" class="a1"><br>上<br><br>午</td>
+			    <td>第一节</td>	
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal" onclick="test1(this.id)" id="1-1">
+			        </button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				
+			</tr>
+			<tr>
+			    <td>第二节</td>	
+			    <td>
+					<!-- <button class="btn-1" data-toggle="modal" data-target="#myModal">
+			        </button> -->
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			</tr>
+			<tr>
+			    <td>第三节</td>	
+			    <td>
+					<!-- <button class="btn-1" data-toggle="modal" data-target="#myModal">
+			        </button> -->
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			</tr>
+			<tr>
+			    <td>第四节</td>	
+			    <td>
+					<!-- <button class="btn-1" data-toggle="modal" data-target="#myModal">
+			        </button> -->
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			</tr>
+			<tr>
+			    <td rowspan="4"><br>下<br><br>午</td>
+			    <td>第五节</td>	
+			    <td>
+					<!-- <button class="btn-1" data-toggle="modal" data-target="#myModal">
+			        </button> -->
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				
+			</tr>
+			<tr>
+			    <td>第六节</td>	
+			    <td>
+					<!-- <button class="btn-1" data-toggle="modal" data-target="#myModal">
+			        </button> -->
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			</tr>
+			<tr>
+			    <td>第七节</td>	
+			    <td>
+					<!-- <button class="btn-1" data-toggle="modal" data-target="#myModal">
+			        </button> -->
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			</tr>
+			<tr>
+			    <td>第八节</td>	
+			    <td>
+					<!-- <button class="btn-1" data-toggle="modal" data-target="#myModal">
+			        </button> -->
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td><button class="btn-1" data-toggle="modal" data-target="#myModal">
+			        </button>
+					
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			</tr>
+			<tr>
+			    <td rowspan="4"><br>晚自习</td>
+			    <td>第九节</td>	
+			    <td>
+					<!-- <button class="btn-1" data-toggle="modal" data-target="#myModal">
+			        </button> -->
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				
+			</tr>
+			<tr>
+			    <td>第十节</td>	
+			    <td>
+					<!-- <button class="btn-1" data-toggle="modal" data-target="#myModal">
+			        </button> -->
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			    <td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+				<td>
+					<button class="btn-1" data-toggle="modal" data-target="#myModal">
+					</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+  <input type="button" value="123" onclick="test1()">
+	<script>
+		function test1(obj) {
+		    alert(obj)
+            var a=$("#setweek").val();
+            alert(a)
+        }
+	</script>
+	<!--<input type="button" id="t1" onclick="testWeek()">-->
+	<!--<script>-->
+	<!--function testWeek() {-->
+	<!--//$("#id").val(data.id);-->
+	<!--//            var getyear=parseInt($("#setyear").val());-->
+	<!--//                   $("#setyear").val()-->
+	<!--var a=$("#setweek").val();-->
+	<!--alert(a)-->
+	<!--}-->
+	<!--</script>-->
+<!-- <div class="bd_w jcalendar_week" id="jcalendar_week"></div> -->
+<div class="pop_bd" id="pop">
+	<div class="pop_con">
+		<span class="pop_close" onClick="$('#pop').hide();">&times;</span>
+		<h5>选择年份：</h5>
+		<div class="flex_i control">
+			<button onClick="$(this).next().val(parseInt($(this).next().val())-1)"><</button>
+			<input class="flex_auto control_val" type="text" id="setyear" value="- -" />
+			<button onClick="$(this).prev().val(parseInt($(this).prev().val())+1)">></button>
+		</div>
+		<h5>选择周：</h5>
+		<div class="flex_i control">
+			<button onClick="$(this).next().val(parseInt($(this).next().val())-1)"><</button>
+			<input class="flex_auto control_val" type="text" id="setweek" value="- -" />
+			<button onClick="$(this).prev().val(parseInt($(this).prev().val())+1)">></button>
+		</div>
+		<div class="flex_i">
+			<button class="setjc_btn nowweek_btn flex_auto" onClick="tonowweek()">本周</button>
+			<button class="setjc_btn flex_auto" onClick="jumpweek()">确定</button>
+		</div>
+	</div>
+</div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		    	<div class="modal-content">
+		    		<div class="modal-header">
+		    			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+		    				&times;
+		    			</button>
+		    			<h4 class="modal-title" id="myModalLabel">
+		    				模态框（Modal）标题
+		    			</h4>
+		    		</div>
+		    		<div class="modal-body">
+		    			在这里添加一些文本
+						111111111
+		    		</div>
+		    		<div class="modal-footer">
+		    			<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+		    			</button>
+		    			<button type="button" class="btn btn-primary">
+		    				提交更改
+		    			</button>
+		    		</div>
+		    	</div>
+		    </div>
+		</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script>
+//调用周日历
+var weekfn =  new jcalendar_week({
+	element: "#jcalendar_week",//填充日历的dom元素
+	dayaddclass:function(date){
+		//添加某天时给添加类名
+		return "";
+	},
+	dayclick:function(date,obj){
+		//day点击事件
+		$(obj).addClass("calendar_day_act").siblings().removeClass("calendar_day_act");
+	}
+});
+//获取周第一天
+console.log(weekfn.weekfirstdate(2018,36));
+//获取传入日期为当年第几周（注:这里的月份从0开始）
+console.log(weekfn.getweeknum(2018,0,16));
+//跳转到指定周
+function jumpweek(){
+	var getyear=parseInt($("#setyear").val());
+	var getweek=parseInt($("#setweek").val());
+	weekfn.confirmweek(getyear,getweek);
+	$('#pop').hide();
+}
+//跳转到本周
+function tonowweek(){
+	weekfn.nowweek();
+	$('#pop').hide();
+}
+
+</script>
+</body>
+</html>

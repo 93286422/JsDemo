@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="init()">
+   <img src="/photos/1.jpg" width="200px"  height="200px" id="imgId">
+</body>
+<script>
+    var i = 1;
+    function init() {
+//        setInterval(3000,show())
+        setInterval(show,3000)
+
+    }
+    function show() {
+        //alert('ssss')
+        i ++;
+       var ImgObj = document.getElementById("imgId")
+        ImgObj.src = "/photos/"+i+".jpg"
+        if(i >= 3){
+           i = 0;
+        }
+    }
+    
+</script>
+</html>

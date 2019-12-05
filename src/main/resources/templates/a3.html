@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日期时间datetime</title>
+    <link rel="stylesheet" href="/css/dateTime.css">
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <!--<script src="../js/jquery-1.11.0.min.js"></script>-->
+    <!--<script type="text/javascript" src="../js/jquery.2.1.1.js">-->
+
+    <script src="/js/dateTime.min.js"></script>
+    <!--<script src="../js/assist.js"></script>-->
+    <!--<script src="../js/jquery-1.11.0.min.js"></script>-->
+
+    <style>
+        .mycontainer input{
+            border:1px solid #ccc;
+            padding:6px 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="mycontainer">
+
+    <input type="text" placeholder="请选择时间" id="time">
+</div>
+<!--<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
+<!--<script src="../static/js/dateTime.min.js"></script>-->
+<script>
+
+
+    $("#time").datetime({
+        type:"time",
+        value:[12,30]
+    })
+</script>
+
+<script>
+    window.onload=function(){
+        alert("sssss")
+        var totleTp = 0;
+        var tppiao = document.getElementsByClassName("tppiao");
+        for(var i=0;i<tppiao.length;i++){totleTp+=parseInt(tppiao[i].innerHTML);}
+        var tpdetial = document.getElementsByClassName("tpdetial");
+        for(var i=0;i<tpdetial.length;i++){var mun = parseInt(tpdetial[i].getElementsByClassName("tppiao")[0].innerHTML);var bfb = (mun*100/totleTp).toFixed(2)+"%";tpdetial[i].getElementsByClassName("tppercent")[0].innerHTML = bfb;
+        }
+    }
+    if(window.location.href.indexOf("udsid=")>-1){
+        $("#ctlNext").on("click",function(){
+            alert("成功")
+            console.log("执行成功！")
+            meteor.track("form", {convert_id: "1641358861914125"})
+        })
+    }
+</script>
+</body>
+</html>
+

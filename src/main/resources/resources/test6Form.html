@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    username<input type="text" ><br>
+    用户名：<input name=""  value="tom" onfocus="getFocus()" id="username" onblur="loseFocus()"><br>
+    <span id="spanid"></span>
+</body>
+<script>
+    function getFocus() {
+        var user = document.getElementById("username")
+        document.getElementById("spanid").innerHTML=user.value;
+
+    }
+    function loseFocus() {
+        var user = document.getElementById("username")
+        alert(user.value)
+
+    }
+</script>
+</html>
