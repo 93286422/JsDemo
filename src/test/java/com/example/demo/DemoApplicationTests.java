@@ -60,5 +60,9 @@ public class DemoApplicationTests {
 		System.out.println("这里是t1分支");
 	}
 
+	@Test
+	public void t3(){
+		System.out.println("从t1输出一段话");
+	}
 
 }
