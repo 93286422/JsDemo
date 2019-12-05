@@ -38,6 +38,10 @@ public class DemoApplicationTests {
 		System.out.println(arr[0][1]);
 	}
 	@Test
+	public void test4(){
+		System.out.println("我是jsDemo2");
+	}
+	@Test
 	public void test3(){
 		System.out.println("我是jsDemo1");
 	}
