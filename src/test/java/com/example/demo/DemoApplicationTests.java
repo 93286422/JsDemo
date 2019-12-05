@@ -50,10 +50,14 @@ public class DemoApplicationTests {
 		System.out.println("这里是s1分支");
 	}
 
-
 	@Test
 	public void s2(){
 		System.out.println("这里是s2");
+	}
+
+	@Test
+	public void t1(){
+		System.out.println("这里是t1分支");
 	}
 
 
