@@ -45,5 +45,10 @@ public class DemoApplicationTests {
 	public void test3(){
 		System.out.println("我是jsDemo1");
 	}
+	@Test
+	public void s2(){
+		System.out.println("这里是s2");
+	}
+
 
 }
