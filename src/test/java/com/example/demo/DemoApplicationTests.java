@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -51,6 +50,11 @@ public class DemoApplicationTests {
 		System.out.println("这里是s1分支");
 	}
 
+
+	@Test
+	public void s2(){
+		System.out.println("这里是s2");
+	}
 
 
 }
